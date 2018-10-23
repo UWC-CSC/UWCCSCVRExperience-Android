@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">UWC CSC VR Experience</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_configuration">ConfigurationActivity</string>
+    <string name="entry_text_default">\"He who wishes to serve his country must have not only the power to think, but the will to act\"</string>
+    <string name="next">Next</string>
+
+    <string name="cvideos_url">https://httpbin.org/get</string>
+    <string name="welcome_head">Welcome</string>
+    <string name="welcome_step_bodytop">Let\'s take a few seconds to get to know each other.</string>
+    <string name="welcome_step_bodybottom">We need some basic information about your device to provide you with the best experience.</string>
+    <string name="headset_step_head">Set up your experience</string>
+    <string name="final_step_head">Your Virtual Reality trip is waiting for you</string>
+    <string name="final_step_body">The UWC Changshu China VR Experience offers you the possibility to explore our beautiful campus, meet amazing people and take part in the events that take place.</string>
 </resources>

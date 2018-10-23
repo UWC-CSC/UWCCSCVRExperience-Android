@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <TextView
+        android:id="@+id/welcome_step_head_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:letterSpacing="0"
+        android:textStyle="normal"
+        android:textSize="48sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/welcome_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/welcome_step_bodytop_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:letterSpacing="0"
+            android:textStyle="normal"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/welcome_step_bodytop" />
+
+        <TextView
+            android:id="@+id/welcome_step_bodybottom_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:letterSpacing="0"
+            android:textStyle="normal"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/welcome_step_bodybottom" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:contentDescription="@string/next"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/ic_navigate_next_56dp" />
+</RelativeLayout>

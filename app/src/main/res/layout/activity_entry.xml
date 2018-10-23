@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".EntryActivity"
-    android:id="@+id/base_relative_layout">
-
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+    tools:context=".EntryActivity">
 
     <ImageView
-        android:id="@+id/loadingLogoImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/logoImageView"
+        android:layout_width="160dp"
+        android:layout_height="98dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/ic_loading_logo"
-        android:contentDescription="@string/app_name"/>
+        android:src="@drawable/ic_loading_logo"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:contentDescription="@string/next"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_round"
+        android:src="@drawable/ic_navigate_next"
+        android:stateListAnimator="@animator/pressed_animator"
+        android:elevation="4dp"
+        android:onClick="nextButtonPressed" />
+
 
 </RelativeLayout>

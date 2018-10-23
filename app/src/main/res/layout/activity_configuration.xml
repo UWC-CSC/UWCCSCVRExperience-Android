@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/configuration_content">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/configuration_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp" />
+
+    <com.badoualy.stepperindicator.StepperIndicator
+        android:id="@+id/configuration_stepper_indicator"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        app:stpi_circleRadius="6dp"
+        app:stpi_stepCount="3"
+        app:stpi_showDoneIcon="false"
+        app:stpi_circleStrokeWidth="0dp"
+        app:stpi_circleColor="#00000000"
+        app:stpi_indicatorColor="@color/colorPrimary"
+        app:stpi_lineMargin="0dp"
+        app:stpi_lineStrokeWidth="0dp"
+        app:stpi_lineColor="#00000000"
+        app:stpi_lineDoneColor="#00000000" />
+</RelativeLayout>
