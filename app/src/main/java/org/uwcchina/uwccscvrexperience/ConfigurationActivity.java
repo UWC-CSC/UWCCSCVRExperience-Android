@@ -7,11 +7,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 
 public class ConfigurationActivity extends FragmentActivity {
+
+    private static MixableColor firstFragmentColor;
+    private static MixableColor secondFragmentColor;
 
     private static final int NUM_PAGES = 3;
 
@@ -20,10 +25,20 @@ public class ConfigurationActivity extends FragmentActivity {
     private StepperIndicator indicator;
     private ViewGroup content;
 
+    private ImageButton nextButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuration);
+
+        // Set up the colors
+        firstFragmentColor = new MixableColor(getResources().getColor(R.color.colorBackground),
+                getResources().getColor(R.color.colorPrimaryDark));
+        secondFragmentColor = new MixableColor(getResources().getColor(R.color.colorPrimaryDark),
+                getResources().getColor(R.color.colorAccent));
+
+        nextButton = findViewById(R.id.configuration_next_button);
 
         content = findViewById(R.id.configuration_content);
         mPager = findViewById(R.id.configuration_pager);
@@ -36,8 +51,15 @@ public class ConfigurationActivity extends FragmentActivity {
             public void onPageScrolled(int i, float v, int i1) {
                 switch (i) {
                     case 0:
+                        content.setBackgroundColor(firstFragmentColor.setMixin(v).toInt());
+
+                        nextButton.setTranslationX(Util.Conversion.dpToPx(-v * (56 + 28),
+                                ConfigurationActivity.this));
                         break;
                     case 1:
+                        content.setBackgroundColor(secondFragmentColor.setMixin(v).toInt());
+
+                        nextButton.setRotation(v * 90);
                         break;
                     case 2:
                         break;
@@ -67,6 +89,27 @@ public class ConfigurationActivity extends FragmentActivity {
         } else {
             // Otherwise, select the previous step.
             mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+        }
+    }
+
+    public void configurationWelcomeNextButtonPressed(View view) {
+        mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+    }
+
+    public void configurationNextButtonPressed(View view) {
+        int i = mPager.getCurrentItem();
+
+        switch (i) {
+            case 0:
+                break;
+            case 1:
+                mPager.setCurrentItem(i + 1);
+                break;
+            case 2:
+                // Next activity
+                break;
+            default:
+                throw new RuntimeException();
         }
     }
 

@@ -12,4 +12,9 @@
     <string name="headset_step_head">Set up your experience</string>
     <string name="final_step_head">Your Virtual Reality trip is waiting for you</string>
     <string name="final_step_body">The UWC Changshu China VR Experience offers you the possibility to explore our beautiful campus, meet amazing people and take part in the events that take place.</string>
+    <string name="fragment_headset_step_body">Please indicate your VR Headset model.</string>
+
+    <string-array name="spin">
+        <item>VR Models</item>
+    </string-array>
 </resources>

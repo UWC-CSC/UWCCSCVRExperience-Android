@@ -9,12 +9,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_sm"
+        android:layout_marginTop="@dimen/margin_lg"
         android:letterSpacing="0"
         android:textStyle="normal"
         android:textSize="48sp"
         android:textColor="@color/colorPrimary"
         android:text="@string/headset_step_head" />
+
+    <TextView
+        android:id="@+id/headset_step_body_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headset_step_head_textView"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_sm"
+        android:layout_marginTop="@dimen/margin_lg"
+        android:letterSpacing="0"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/fragment_headset_step_body" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/vr_headset_searchable_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headset_step_body_textView"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_md"
+        android:entries="@array/spin"
+        android:layout_marginTop="@dimen/margin_lg" />
 
 </RelativeLayout>
