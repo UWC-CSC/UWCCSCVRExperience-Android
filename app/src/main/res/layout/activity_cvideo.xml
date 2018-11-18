@@ -26,8 +26,7 @@
             <ImageButton
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:src="" />
+                android:layout_gravity="center" />
 
             <com.github.andreilisun.circular_layout.CircularLayout
                 android:layout_width="300dp"
