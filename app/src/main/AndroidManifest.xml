@@ -22,9 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ConfigurationActivity"
-            android:label="@string/title_activity_configuration"></activity>
+        <activity android:name=".ConfigurationActivity" />
+        <activity android:name=".CVideoActivity" />
     </application>
 
 </manifest>

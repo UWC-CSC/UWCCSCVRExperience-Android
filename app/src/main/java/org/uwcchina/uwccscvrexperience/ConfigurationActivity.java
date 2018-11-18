@@ -1,5 +1,6 @@
 package org.uwcchina.uwccscvrexperience;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -106,7 +107,9 @@ public class ConfigurationActivity extends FragmentActivity {
                 mPager.setCurrentItem(i + 1);
                 break;
             case 2:
-                // Next activity
+                Intent intent = new Intent(ConfigurationActivity.this,
+                        CVideoActivity.class);
+                startActivity(intent);
                 break;
             default:
                 throw new RuntimeException();

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".EntryActivity">
+
+    <org.uwcchina.uwccscvrexperience.ParallaxView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/campus"
+        android:id="@+id/video_selection_background" />
+
+    <com.jrummyapps.android.widget.TwoDScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="" />
+
+            <com.github.andreilisun.circular_layout.CircularLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+            </com.github.andreilisun.circular_layout.CircularLayout>
+        </FrameLayout>
+
+    </com.jrummyapps.android.widget.TwoDScrollView>
+
+
+</FrameLayout>
