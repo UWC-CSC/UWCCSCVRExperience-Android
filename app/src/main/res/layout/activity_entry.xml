@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".EntryActivity">
+    tools:context=".EntryActivity"
+    android:animateLayoutChanges="true">
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -15,7 +16,7 @@
         android:contentDescription="@string/app_name" />
 
     <ImageButton
-        android:id="@+id/nextButton"
+        android:id="@+id/entryNextButton"
         android:contentDescription="@string/next"
         android:layout_width="56dp"
         android:layout_height="56dp"
@@ -25,8 +26,20 @@
         android:background="@drawable/button_round"
         android:src="@drawable/ic_navigate_next"
         android:stateListAnimator="@animator/pressed_animator"
+        android:visibility="invisible"
         android:elevation="4dp"
         android:onClick="nextButtonPressed" />
 
+    <ImageView
+        android:id="@+id/entryServerErrorImageView"
+        android:contentDescription="Server Error. Please Retry later."
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_error_outline_56dp"
+        android:visibility="invisible"
+        android:onClick="tryServer" />
 
 </RelativeLayout>

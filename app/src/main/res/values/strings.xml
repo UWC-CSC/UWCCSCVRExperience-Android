@@ -2,10 +2,11 @@
     <string name="app_name">UWC CSC VR Experience</string>
 
     <string name="title_activity_configuration">ConfigurationActivity</string>
-    <string name="entry_text_default">\"He who wishes to serve his country must have not only the power to think, but the will to act\"</string>
     <string name="next">Next</string>
 
-    <string name="cvideos_url">https://httpbin.org/get</string>
+    <string name="api_base_url">http://192.168.0.104</string>
+    <string name="api_port">:5000</string>
+    <string name="api_cvideos_url">/cvideos</string>
     <string name="welcome_head">Welcome</string>
     <string name="welcome_step_bodytop">Let\'s take a few seconds to get to know each other.</string>
     <string name="welcome_step_bodybottom">We need some basic information about your device to provide you with the best experience.</string>
@@ -17,4 +18,5 @@
     <string-array name="spin">
         <item>VR Models</item>
     </string-array>
+    <string name="title_activity_video_selection">VideoSelectionActivity</string>
 </resources>

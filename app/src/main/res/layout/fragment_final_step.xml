@@ -12,10 +12,7 @@
         android:layout_marginStart="@dimen/margin_md"
         android:layout_marginEnd="@dimen/margin_sm"
         android:layout_marginTop="@dimen/margin_lg"
-        android:letterSpacing="0"
-        android:textStyle="normal"
-        android:textSize="48sp"
-        android:textColor="@color/colorPrimary"
+        android:textAppearance="@style/H3Text"
         android:text="@string/final_step_head" />
 
     <TextView

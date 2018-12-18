@@ -108,7 +108,7 @@ public class ConfigurationActivity extends FragmentActivity {
                 break;
             case 2:
                 Intent intent = new Intent(ConfigurationActivity.this,
-                        CVideoActivity.class);
+                        VideoSelectionActivity.class);
                 startActivity(intent);
                 break;
             default:

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
@@ -27,7 +26,8 @@ public class EntryActivity extends AppCompatActivity {
     private SharedPreferences prefs = null;
 
     private ImageView logoImageView;
-    private ImageButton nextButton;
+    private ImageView entryServerErrorImageView;
+    private ImageButton entryNextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +38,11 @@ public class EntryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_entry);
 
         logoImageView = findViewById(R.id.logoImageView);
-        nextButton = findViewById(R.id.nextButton);
+        entryNextButton = findViewById(R.id.entryNextButton);
+        entryServerErrorImageView = findViewById(R.id.entryServerErrorImageView);
 
         mRequestQueue = Volley.newRequestQueue(this);
-        requestCVideos();
+        tryServer();
     }
 
     @Override
@@ -69,22 +70,32 @@ public class EntryActivity extends AppCompatActivity {
     /**
      * Creates a Volley.StringRequest for fetching the CVideos.
      */
-    private void requestCVideos() {
+    private void tryServer() {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
-                getString(R.string.cvideos_url), null,
-                new Response.Listener<JSONObject>() {
+                getString(R.string.api_base_url) + getString(R.string.api_port),
+                null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         if (response != null) {
-                            // TODO: Show the button, animated
+                            entryServerErrorImageView.setVisibility(View.INVISIBLE);
+                            entryNextButton.setVisibility(View.VISIBLE);
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d(EntryActivity.class.getName(), "returned an error: ", error.getCause());
+                entryNextButton.setVisibility(View.INVISIBLE);
+                entryServerErrorImageView.setVisibility(View.VISIBLE);
             }
         });
+
         mRequestQueue.add(request);
+    }
+
+    /**
+     * Wrapper method for the button
+     */
+    public void tryServer(View view) {
+        tryServer();
     }
 }

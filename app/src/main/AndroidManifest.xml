@@ -24,6 +24,9 @@
         </activity>
         <activity android:name=".ConfigurationActivity" />
         <activity android:name=".CVideoActivity" />
+        <activity
+            android:name=".VideoSelectionActivity"
+            android:label="@string/title_activity_video_selection"></activity>
     </application>
 
 </manifest>
